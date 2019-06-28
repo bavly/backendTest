@@ -31,7 +31,7 @@ It must be positive number if the country come from northern hemisphere.
 
 ●	The service should run on port 8888
 
-Requirements for the service API:
+# Requirements for the service API:
 
 ●	Service should expose one endpoint for a GET request
 
