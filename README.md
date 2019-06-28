@@ -10,6 +10,7 @@ In order to get information about IP addresses please use
 
 
 Use latitude value to decide if IP address comes from a country from the northern hemisphere.
+
 It must be positive number if the country come from northern hemisphere.
 
 ## To use the service
