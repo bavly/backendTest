@@ -44,9 +44,10 @@ It must be positive number if the country come from northern hemisphere.
 ●	Response should contain list of unique names (no repetitions of names) sorted alphabetically
 
 
-## Example use case:Request:
+## Example use case:
 
-curl 
+Request:curl 
+
 ```
 "http://localhost:8888/northcountries?ip=8.8.8.8&ip=8.8.0.0&ip=177.0.0.0&ip=180.0.0.0&ip=190.0.0.0"
 ```
