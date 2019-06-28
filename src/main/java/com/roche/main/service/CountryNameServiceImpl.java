@@ -32,7 +32,7 @@ public class CountryNameServiceImpl implements CountryNameService {
 	private static final Set<String> setOfCountires = new TreeSet<String>();
 
 	@Override
-	public Response  checkIPAddress(List<String> ipAddress) {
+	public Response  northernCountries (List<String> ipAddress) {
 
 		if (ipAddress.isEmpty() == true || ipAddress.equals(null) || ipAddress.size() < 1)
 			throw new ExceptionHandling("ip is empty or null" + ipAddress);

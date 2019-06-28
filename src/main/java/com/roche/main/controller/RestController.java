@@ -45,7 +45,7 @@ public class RestController {
 	public ResponseEntity<Response>  processData(@RequestParam("ip") final List<String> ipAddress) {
 		try {
 		
-		 return new ResponseEntity<Response>(countryNameService.checkIPAddress(ipAddress), HttpStatus.OK);
+		 return new ResponseEntity<Response>(countryNameService.northernCountries(ipAddress), HttpStatus.OK);
 			
 		} catch (Exception e) {
 			log.error("CountryName: error: {}", e.getMessage());

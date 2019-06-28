@@ -47,6 +47,12 @@ public class CountryNameTest {
 				.andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
 				.andExpect(jsonPath("$.northcountries").value(hasItem("France")));
 	}
+	
+	@Test
+	public void testGetCountriesWrongIpAddress() throws Exception {
+		countryNameMockMvc.perform(get(url + "/northcountries?ip=6522.33.3"))
+		.andExpect(status().isBadRequest());
+	}
 
 	@Test
 	public void testGetCountriesByIPAddressMoreThanFiveIPAdress() throws Exception {
@@ -60,10 +66,6 @@ public class CountryNameTest {
 		.andExpect(status().isBadRequest());
 	}
 
-	@Test
-	public void testGetCountriesWithWrongIp() throws Exception {
-		countryNameMockMvc.perform(get(url + "/northcountries?ip=6522.33.3"))
-		.andExpect(status().isBadRequest());
-	}
+
 
 }
